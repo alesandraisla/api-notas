@@ -1,0 +1,13 @@
+meus logs:
+
+
+
+
+ URL - [/student] | METHOD - [POST]
+ URL - [/student] | METHOD - [POST]
+ URL - [/student] | METHOD - [GET]
+ URL - [/student] | METHOD - [GET]
+ URL - [/student/612d0d30941e420c9e4fbd92] | METHOD - [PUT]
+ URL - [/student] | METHOD - [GET]
+ URL - [/student/612d0d30941e420c9e4fbd92] | METHOD - [DELETE]
+ URL - [/student] | METHOD - [GET]

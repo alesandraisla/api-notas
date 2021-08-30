@@ -4,6 +4,7 @@ import routes from './routes.js';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import dbOptions from './config/db.options.js';
+import logger from './middlewares/log.middleware.js';
 dotenv.config();
 
 const server = express();
@@ -11,6 +12,7 @@ const server = express();
 mongoose.connect(process.env.DATABASE_URL, dbOptions);
 
 server.use(express.json());
+server.use(logger);
 server.use(routes);
 
 const database = mongoose.connection;

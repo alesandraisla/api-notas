@@ -1,5 +1,6 @@
 import express from 'express';
 import studentController from './controller/student.controller.js';
+import auth from './middlewares/auth.middlewares.js';
 
 const routes = express.Router();
 
@@ -8,7 +9,7 @@ const routes = express.Router();
 //     return res.json(studentGrade);
 // })
 
-routes.get('/student', studentController.findAll);
+routes.get('/student', auth, studentController.findAll);
 
 // routes.get('/student/:id', (req, res) => {
 //     const { id } = req.params;
@@ -17,7 +18,7 @@ routes.get('/student', studentController.findAll);
 //     return res.json(student);
 // })
 
-routes.get('/student/:id', studentController.findById);
+routes.get('/student/:id', auth, studentController.findById);
 
 // Adicionando Dados
 // routes.post('/student', (req, res) => {
@@ -50,7 +51,7 @@ routes.post('/student', studentController.create);
 //     return res.json({message: 'Lançamento alterado!'});
 // })
 
-routes.put('/student/:id', studentController.update);
+routes.put('/student/:id', auth, studentController.update);
 
 // Deletar Dados
 // routes.delete('/student/:id', (req, res) => {
@@ -62,6 +63,6 @@ routes.put('/student/:id', studentController.update);
 // })
 
 
-routes.delete('/student/:id', studentController.deleteStudent);
+routes.delete('/student/:id', auth, studentController.deleteStudent);
 
 export default routes;
