@@ -2,7 +2,6 @@
   "name": "aluno-api",
   "version": "1.0.0",
   "description": "",
-  // "main": "index.js",
   "private": true,
   "type": "module",
   "scripts": {
