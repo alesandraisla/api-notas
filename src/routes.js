@@ -1,8 +1,12 @@
 import express from 'express';
 import studentController from './controller/student.controller.js';
 import auth from './middlewares/auth.middlewares.js';
+import userController from './controller/user.controller.js';
 
 const routes = express.Router();
+
+
+routes.post('/login', userController.createMasterUser);
 
 //Buscando Dados
 // routes.get('/student', (req, res) => {

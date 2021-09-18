@@ -1,8 +1,5 @@
 import Student from "../models/Student.js";
 import average from "../helpers/average.js";
-import jwt from "jsonwebtoken";
-import dotenv from "dotenv";
-dotenv.config();
 
 
 //Inserir um dado
@@ -18,8 +15,9 @@ const create = async (req, res) => {
         nota4,
         media
     })
-    const token = jwt.sign({ id: toSave._id }, process.env.JWT_SECRET, { expiresIn: '10d' })
-    return res.json({ toSave, authToken: token });
+    // const token = jwt.sign({ id: toSave._id }, process.env.JWT_SECRET, { expiresIn: '10d' })
+    // return res.json({ toSave, authToken: token }); 
+    return res.json({ toSave })
 }
 
 //Procurar por todos
